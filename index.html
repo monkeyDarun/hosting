@@ -1,36 +1,57 @@
 <html>
     <head>
-        <title>anime</title>
+        <title>Engineer Portfolio</title>
+        <link rel="icon" href="https://www.shutterstock.com/image-vector/engineer-vector-icon-260nw-1184014012.jpg" type="image/x-icon"/>
         <style>
-            div{
-                height: 100px;
-                width: 100px;
-                background-color: blue;
-                animation-name: an;
-                animation-duration: 7s;
+            nav{
+                display: flex;
+                transition-property: font-size, color;
+                transition-duration: 4s;
+            }
+            a{
+                color: rgb(0, 0, 0); text-decoration: none;
+            }
+            h5{
+                padding-left: 20;
+                color: white;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            a:hover{
+                font-size: larger;
+                color: red;
+            }
+            .move{
+                animation-name: moving;
+                animation-duration: 30s;
                 animation-iteration-count: infinite;
-                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 position: relative;
-                top: 20px;
-                left: 20px;
-                transition-property: width;
-                transition-duration: 2s;
             }
-            div:hover{
-                width: 200px;
-                animation-play-state: paused;
-            }
-            @keyframes an {
-                from{background-color: blue; left: 20px; top: 20px;}
-                25%{background-color: red; left: 220px; top: 20px}
-                50%{background-color: yellow; left: 220px; top: 220px;}
-                75%{background-color: green; left: 20px; top: 220px}
-                to{background-color: blue; left: 20px; top: 20px;}
-                
+            @keyframes moving{
+                from{left: 0%;}
+                to{left: 90%;}
             }
         </style>
     </head>
-    <body>
-        <div></div>
+    <body style="background-color: rgb(197, 236, 249); border: 3px solid darkcyan; border-bottom: 0px;">
+        <div>
+            <nav>
+                <h1 style="color: rgb(0, 0, 0); margin-right: 50%; font-size: 50px;">Portfolio.</h1>
+                <img src="https://www.shutterstock.com/image-vector/engineer-vector-icon-260nw-1184014012.jpg" style="width: 50px; height: 50px;">
+                <h5><a href="https://www.google.com/">HOME</a></h5>
+                <h5><a href="https://www.google.com/">RESUME</a></h5>
+                <h5><a href="https://www.google.com/">ABOUT</a></h5>
+                <h5><a href="https://www.google.com/">CONTACT</a></h5>
+            </nav>
+        </div>
+        <div style="display: flex; margin-left: 30%; margin-top: 5%;">
+            <div style="padding-right: 80;">
+                <h1 style="position: relative; font-size: 50px;">Hello, I'm <br>Arun</h1>
+                <h2>I'm a Electronics And Communication<br> Engineer learning MERN.</h2>
+            </div>
+            <div style="padding-left: 20;"><img src="https://img.freepik.com/free-vector/cute-man-working-laptop-with-coffee-cartoon-vector-icon-illustration-people-technology-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3869.jpg " style="width: 200px; height: 200px; border-radius: 50%; border: 3px dotted darkcyan;"></div>
+        </div>
+        <footer>
+            <img src="https://media.tenor.com/ke1anE0mW-kAAAAj/robot.gif" class="move">
+        </footer>
     </body>
 </html>
